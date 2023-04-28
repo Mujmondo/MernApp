@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: "Roboto";
+  background-color: #2c2c2c;
+}
+
+header{
+  background-color: #caaf36;
+}
+
+header .logo h1{
+  font-family: "segoe UI";
+  color: #fff;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.workout-card{
+  background-color: #222;
+  color: #ddd;
+  border-bottom: 3px solid #caaf36;
+  max-width: 900px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.workout-card h1{
+  color: #caaf36;
+  font-size: 25px;
+}
+
+.workout-card p strong{
+  font-size: 16px;
+}
+
+h4, p, div{
+  color: #fff;
+}
+
+.workout-form input{
+  background-color: #222;
+  color: #fff;
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 10px;
+  border: 2px solid #caaf36;
+  border-radius: 10px;
+}
+
+.workout-form input:focus{
+  outline: none;
+  border-color: #ddd;
+}
+
+.workout-form label{
+  color: #fff;
+}
+
+.workout-form button{
+  background-color: #caaf36;
+  color: #fff;
+  width: 100%;
+  padding: 7px;
+  font-weight: 700;
+  border: 0;
+  border-radius: 10px;
+}
