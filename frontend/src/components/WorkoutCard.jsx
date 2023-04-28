@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { WorkoutContext } from "../context/WorkoutContext";
+import {formatDistanceToNow} from "date-fns"
 
 const WorkoutCard = ({workout}) => {
 const {dispatch} = useContext(WorkoutContext)
@@ -22,7 +23,7 @@ const {dispatch} = useContext(WorkoutContext)
            <h1 className="mb-1">{workout.title}</h1>
             <p className="mb-1"><strong>Load (kg):</strong> {workout.load}</p>
             <p className="mb-1"><strong>Reps:</strong> {workout.reps}</p>
-            <p className="createdat mb-0">{workout.createdAt}</p>
+            <p className="createdat mb-0">{formatDistanceToNow(new Date(workout.createdAt), {addSuffix: true})}</p>
            </div>
            <div>
             <button 

@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { WorkoutCard, WorkoutForm } from "../components";
 import { WorkoutContext } from "../context/WorkoutContext";
 
@@ -14,7 +14,7 @@ const Home = () => {
             }
         }
         fetchWorkouts()
-    }, []);
+    }, [dispatch]);
 
     return (
         <>

@@ -1,5 +1,7 @@
 const express = require('express')
 
+const router = express.Router()
+
 const Workout = require('../models/workoutModel')
 
 const {
@@ -10,7 +12,6 @@ const {
     updateWorkout
 } = require('../controllers/workoutController')
 
-const router = express.Router()
 
 
 // Get all workouts
