@@ -57,6 +57,10 @@ h4, p, div{
   border-radius: 10px;
 }
 
+.workout-form input.error{
+  border-color: #e24444;
+}
+
 .workout-form input:focus{
   outline: none;
   border-color: #ddd;
@@ -64,6 +68,10 @@ h4, p, div{
 
 .workout-form label{
   color: #fff;
+}
+
+.workout-form div.error{
+  color: #e24444;
 }
 
 .workout-form button{
