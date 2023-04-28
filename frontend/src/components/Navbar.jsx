@@ -1,7 +1,7 @@
 const Navbar = () => {
     return ( 
         <header>
-            <div className="container py-4">
+            <div className="container py-3">
                 <div className="logo">
                     <h1>Workout Application</h1>
                 </div>

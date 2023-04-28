@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { WorkoutContext } from "../context/WorkoutContext";
 
 const WorkoutForm = () => {
+    const {dispatch} = useContext(WorkoutContext)
 
     const [title, setTitle] = useState('');
     const [reps, setReps] = useState('');
@@ -27,7 +29,7 @@ const WorkoutForm = () => {
             setTitle('')
             setReps('')
             setLoad('')
-            console.log('post successful', json)
+            dispatch({type: 'CREATE_WORKOUT', payload: json})   
         }
     }
 
