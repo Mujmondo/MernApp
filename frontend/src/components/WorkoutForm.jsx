@@ -1,8 +1,10 @@
 import { useContext, useState } from "react";
 import { WorkoutContext } from "../context/WorkoutContext";
+import { authContext } from "../context/AuthContext";
 
 const WorkoutForm = () => {
     const {dispatch} = useContext(WorkoutContext)
+    const {user} = useContext(authContext)
 
     const [title, setTitle] = useState('');
     const [reps, setReps] = useState('');
@@ -12,12 +14,19 @@ const WorkoutForm = () => {
 
     const handleForm = async (e) => {
         e.preventDefault()
+        
+        if(!user){
+            setError('You must be logged in')
+            return
+        }
+        
         const workout = {title, reps, load}
         const response = await fetch('/api/workouts', {
             method: 'POST',
             body: JSON.stringify(workout),
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${user.token}`
             }
         })
         const json = await response.json()

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pathway+Extreme:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 body {
   margin: 0;
   font-family: "Source Sans Pro";
@@ -12,6 +12,7 @@ div, h1, h2, h3, h4, h5, h6, span, p, input{
 
 header{
   background-color: #caaf36;
+  height: 80px;
 }
 
 header .logo h1{
@@ -47,7 +48,7 @@ h4, p, div{
   color: #fff;
 }
 
-.workout-form input{
+.workout-form input, .signup input{
   background-color: #222;
   color: #fff;
   width: 100%;
@@ -56,12 +57,11 @@ h4, p, div{
   border: 2px solid #caaf36;
   border-radius: 10px;
 }
-
-.workout-form input.error{
+.workout-form input.error, .signup input.error{
   border-color: #e24444;
 }
 
-.workout-form input:focus{
+.workout-form input:focus, .signup input:focus{
   outline: none;
   border-color: #ddd;
 }
@@ -70,16 +70,25 @@ h4, p, div{
   color: #fff;
 }
 
-.workout-form div.error{
+.workout-form div.error, .signup div.error{
   color: #e24444;
 }
 
-.workout-form button{
+.workout-form button, .signup button{
+  width: 100%;
   background-color: #caaf36;
   color: #fff;
-  width: 100%;
   padding: 7px;
   font-weight: 700;
   border: 0;
   border-radius: 10px;
+}
+
+.signup h1{
+  font-size: 30px;
+}
+
+.signup form{
+  max-width: 600px;
+  padding: 0 30px;
 }
